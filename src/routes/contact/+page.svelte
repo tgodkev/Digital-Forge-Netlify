@@ -10,16 +10,13 @@
 
 <Callout>This form does nothing! It's just here to show default styling.</Callout>
 
-<form netlify>
-	<div class="form-section">
-		<label for="name">Name</label>
-		<input type="text" id="name" placeholder="First name" />
-	</div>
-
-	<div class="form-section">
-		<label for="email">Email</label>
-		<input type="email" id="email" placeholder="Email address" />
-	</div>
-
+<form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+	<input type="hidden" name="form-name" value="netlify-form-example" />
+	<label for="name">Name</label>
+	<input name="name" id="name" required placeholder="Name" type="text" />
+	<label for="email">Email</label>
+	<input name="email" id="email" required placeholder="Email" type="email" />
+	<label for="message">Message</label>
+	<input name="message" id="message" required placeholder="Message" type="text" />
 	<input type="submit" value="Submit" />
 </form>
