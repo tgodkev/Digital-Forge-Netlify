@@ -10,7 +10,7 @@
 
 <Callout>This form does nothing! It's just here to show default styling.</Callout>
 
-<form on:submit|preventDefault netlify>
+<form netlify>
 	<div class="form-section">
 		<label for="name">Name</label>
 		<input type="text" id="name" placeholder="First name" />
