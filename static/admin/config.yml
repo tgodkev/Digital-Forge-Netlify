@@ -5,13 +5,19 @@ backend:
 media_folder: 'static/images'
 public_folder: '/images'
 collections:
-  - name: blog # Used in routes, e.g., /admin/collections/blog
-    label: Blog # Used in the UI
-    folder: src/lib/posts # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in front matter
+  - name: blog
+    label: Blog
+    folder: src/lib/posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Updated Date", name: "updated", widget: "datetime", required: false }
+      - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Cover Image Width", name: "coverWidth", widget: "number", required: false }
+      - { label: "Cover Image Height", name: "coverHeight", widget: "number", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
