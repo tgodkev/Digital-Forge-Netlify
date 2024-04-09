@@ -16,7 +16,7 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Updated Date", name: "updated", widget: "datetime", required: false }
       - { label: "Categories", name: "categories", widget: "list" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "CoverImage", name: "coverImage", widget: "image" }
       - { label: "Cover Image Width", name: "coverWidth", widget: "number", required: false }
       - { label: "Cover Image Height", name: "coverHeight", widget: "number", required: false }
       - { label: "Excerpt", name: "excerpt", widget: "text", required: false }
