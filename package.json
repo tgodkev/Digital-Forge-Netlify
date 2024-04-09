@@ -30,6 +30,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/cormorant-garamond": "^5.0.12",
+		"@fontsource/galindo": "^5.0.19",
 		"decap-cms-app": "^3.1.8"
 	}
 }
