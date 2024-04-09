@@ -3,7 +3,7 @@
 	import NavItems from './NavItems.svelte';
 </script>
 
-<footer>
+<footer class="bg-accent text-white">
 	<nav>
 		<ul>
 			<li>

@@ -9,11 +9,7 @@
 	};
 </script>
 
-<header>
-	<a on:click|preventDefault={focusMain} class="skip-to-content-link" href="#main">
-		Skip to main content
-	</a>
-
+<header class="bg-primary text-white">
 	<a href="/" class="site-title">
 		<h3>{siteTitle}</h3>
 	</a>
