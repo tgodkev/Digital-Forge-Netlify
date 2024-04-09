@@ -13,8 +13,21 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Updated Date", name: "updated", widget: "datetime", required: false }
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+      - label: "Updated Date"
+        name: "updated"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+        required: false
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "CoverImage", name: "coverImage", widget: "image" }
       - { label: "Cover Image Width", name: "coverWidth", widget: "number", required: false }
