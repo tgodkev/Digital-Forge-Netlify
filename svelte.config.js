@@ -33,6 +33,9 @@ const config = {
 				'/blog/page/',
 				'/blog/page/*'
 			]
+		},
+		alias: {
+			'@/*': './path/to/lib/*'
 		}
 	}
 };

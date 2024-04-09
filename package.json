@@ -32,6 +32,10 @@
 	"dependencies": {
 		"@fontsource/cormorant-garamond": "^5.0.12",
 		"@fontsource/galindo": "^5.0.19",
-		"decap-cms-app": "^3.1.8"
+		"clsx": "^2.1.0",
+		"decap-cms-app": "^3.1.8",
+		"lucide-svelte": "^0.366.0",
+		"tailwind-merge": "^2.2.2",
+		"tailwind-variants": "^0.2.1"
 	}
 }
