@@ -11,7 +11,6 @@
 		</a>
 	</div>
 	<div class="lg:col-span-10 lg:col-start-4 lg:text-3xl">
-		<HamburgerMenuButton />
 		<MainNav />
 	</div>
 </header>
