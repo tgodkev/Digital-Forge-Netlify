@@ -17,6 +17,9 @@ dependencies:
   decap-cms-app:
     specifier: ^3.1.8
     version: 3.1.8(@types/react@18.2.74)(graphql@15.8.0)(react-dom@18.2.0)(react@18.2.0)
+  gsap:
+    specifier: ^3.12.5
+    version: 3.12.5
   lucide-svelte:
     specifier: ^0.366.0
     version: 0.366.0(svelte@4.2.12)
@@ -3301,6 +3304,10 @@ packages:
       kind-of: 6.0.3
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
+    dev: false
+
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
     dev: false
 
   /has-bigints@1.0.2:
