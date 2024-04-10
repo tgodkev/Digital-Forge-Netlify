@@ -1,7 +1,6 @@
 header,
 footer {
 	font-family: var(--primaryFont);
-	padding: 2.5rem 2rem;
 }
 
 :where(header, footer) a {
