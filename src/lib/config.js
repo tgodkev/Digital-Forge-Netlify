@@ -21,17 +21,14 @@ export const navItems = [
 		route: '/'
 	},
 	{
-		title: 'Pricing',
+		title: 'Services',
 		route: '/blog'
 	},
 	{
 		title: 'Blog',
 		route: '/blog'
 	},
-	{
-		title: 'About',
-		route: '/about'
-	},
+
 	{
 		title: 'Contact',
 		route: '/contact'
