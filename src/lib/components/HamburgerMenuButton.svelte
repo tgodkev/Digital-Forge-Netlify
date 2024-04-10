@@ -1,7 +1,6 @@
 <script>
 	import { isMenuOpen } from '../assets/js/store';
-	import HamburgerSVG from './svg/HamburgerSVG.svelte';
-	import XSVG from './svg/XSVG.svelte';
+	import { Menu, X } from 'lucide-svelte';
 
 	export let closeOnly = false;
 
@@ -18,8 +17,8 @@
 >
 	<span class="sr-only">Toggle hamburger menu</span>
 	{#if closeOnly}
-		<XSVG />
+		<X />
 	{:else}
-		<HamburgerSVG />
+		<Menu />
 	{/if}
 </button>

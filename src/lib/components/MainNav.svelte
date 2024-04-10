@@ -5,7 +5,7 @@
 </script>
 
 <!-- Contents of this file will be used in the header and the responsive hamburger menu. -->
-<nav class="main-nav" class:open={$isMenuOpen}>
+<nav class="" class:open={$isMenuOpen}>
 	<NavItems />
 	<HamburgerMenuButton closeOnly="true" />
 </nav>
