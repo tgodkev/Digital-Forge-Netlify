@@ -62,7 +62,7 @@
 <div class:open={$isMenuOpen}>
 	<Header />
 	{#key data.path}
-		<main id="main" tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
+		<main tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
 			<slot />
 		</main>
 	{/key}
