@@ -1,4 +1,5 @@
 <script>
+	import GuyOne from '$lib/components/GuyOne.svelte';
 	import { siteTitle, siteDescription } from '$lib/config';
 </script>
 
@@ -31,6 +32,16 @@
 
 	<img src="/images/tri1.svg" alt="" class="relative -top-[1px]" />
 </section>
-<div>
-	<div>this will be the cta section</div>
+<div class="lg:grid lg:grid-cols-3 lg:p-10">
+	<div class="place-self-center">
+		<h2 class="lg:text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+		<p class="max-w-prose">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa ratione, illo, quod quia
+			dolorem, sapiente blanditiis cum accusamus soluta illum libero ad temporibus alias explicabo
+			veritatis repellat deleniti voluptatibus.
+		</p>
+	</div>
+	<div class="h-full w-full lg:col-span-2 rounded-md flex justify-center bg-primary">
+		<GuyOne />
+	</div>
 </div>
