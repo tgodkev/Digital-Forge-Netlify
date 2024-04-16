@@ -1,5 +1,6 @@
 <script>
 	import GuyOne from '$lib/components/GuyOne.svelte';
+	import GirlOne from '$lib/components/GirlOne.svelte';
 	import { siteTitle, siteDescription } from '$lib/config';
 </script>
 
@@ -32,7 +33,7 @@
 
 	<img src="/images/tri1.svg" alt="" class="relative -top-[1px]" />
 </section>
-<div class="lg:grid lg:grid-cols-3 lg:p-10">
+<section class="lg:grid lg:grid-cols-3 lg:p-10">
 	<div class="place-self-center">
 		<h2 class="lg:text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
 		<p class="max-w-prose">
@@ -44,4 +45,20 @@
 	<div class="h-full w-full lg:col-span-2 rounded-md flex justify-center bg-primary">
 		<GuyOne />
 	</div>
-</div>
+</section>
+
+<section class="lg:grid lg:grid-cols-2 bg-primary lg:p-5">
+	<div class=" flex justify-center">
+		<GirlOne />
+	</div>
+	<div class="place-self-center flex flex-col items-center bg-white rounded-md w-full lg:p-10">
+		<h2>Lorem Ipsum</h2>
+		<ul class="flex gap-5">
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+		</ul>
+	</div>
+</section>
