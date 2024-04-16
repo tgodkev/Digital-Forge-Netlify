@@ -1,13 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-
-	onMount(() => {
-		if (typeof window !== 'undefined') {
-			import('$lib/gsapConfig').then((gsap) => {
-				// Your animation code here
-			});
-		}
-	});
+	import { gsap } from '$lib/gsapConfig';
 </script>
 
 <svg viewBox="0 0 439 498" class="lg:h-96" fill="none" xmlns="http://www.w3.org/2000/svg">
