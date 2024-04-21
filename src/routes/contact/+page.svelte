@@ -7,11 +7,6 @@
 
 	onMount(() => {
 		gsap.from('input, label, button', {
-			scrollTrigger: {
-				trigger: 'form',
-				start: 'top 75%',
-				toggleActions: 'play none none none'
-			},
 			duration: 1,
 			x: -500, // Horizontal slide from left
 			opacity: 0,
