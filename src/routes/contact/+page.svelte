@@ -1,20 +1,46 @@
 <script>
+	import { onMount } from 'svelte';
+	import { Input } from '$lib/components/ui/input';
+	import { Button } from '$lib/components/ui/button/index.js';
 	import Callout from '$lib/components/Callout.svelte';
+	import { gsap } from '$lib/gsapConfig';
+
+	onMount(() => {
+		gsap.from('input, label, button', {
+			scrollTrigger: {
+				trigger: 'form',
+				start: 'top 75%',
+				toggleActions: 'play none none none'
+			},
+			duration: 1,
+			x: -500, // Horizontal slide from left
+			opacity: 0,
+			stagger: 0.3, // Time delay between starting animations for each input
+			ease: 'power1.out'
+		});
+	});
 </script>
 
 <svelte:head>
 	<title>Contact</title>
 </svelte:head>
 
-<h1>Contact</h1>
-
-<form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-	<input type="hidden" name="form-name" value="netlify-form-example" />
-	<label for="name">Name</label>
-	<input name="name" id="name" required placeholder="Name" type="text" />
-	<label for="email">Email</label>
-	<input name="email" id="email" required placeholder="Email" type="email" />
-	<label for="message">Message</label>
-	<input name="message" id="message" required placeholder="Message" type="text" />
-	<input type="submit" value="Submit" />
-</form>
+<section class="p-5">
+	<h1>Contact</h1>
+	<form
+		name="contact-page-form"
+		class="max-w-2xl"
+		method="POST"
+		netlify-honeypot="bot-field"
+		data-netlify="true"
+	>
+		<input type="hidden" name="form-name" value="contact-page-form" />
+		<label for="name">Name</label>
+		<Input name="name" id="name" required placeholder="Name" type="text" />
+		<label for="email">Email</label>
+		<Input name="email" id="email" required placeholder="Email" type="email" />
+		<label for="message">Message</label>
+		<Input name="message" id="message" required placeholder="Message" type="text" />
+		<Button type="submit" class="mt-2" size="lg" value="Submit">Submit</Button>
+	</form>
+</section>

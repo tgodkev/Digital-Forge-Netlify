@@ -33,6 +33,7 @@
 	"dependencies": {
 		"@fontsource/cormorant-garamond": "^5.0.12",
 		"@fontsource/galindo": "^5.0.19",
+		"bits-ui": "^0.21.4",
 		"clsx": "^2.1.0",
 		"decap-cms-app": "^3.1.8",
 		"gsap": "^3.12.5",
