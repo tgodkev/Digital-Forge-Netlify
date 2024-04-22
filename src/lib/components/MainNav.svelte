@@ -10,7 +10,6 @@
 		<NavItems />
 	</div>
 	<div class="lg:hidden">
-		<NavItems />
 		<HamburgerMenuButton closeOnly="true" />
 	</div>
 </nav>

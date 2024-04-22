@@ -1,6 +1,8 @@
 <script>
 	import { isMenuOpen } from '../assets/js/store';
+	import * as Sheet from '$lib/components/ui/sheet';
 	import { Menu, X } from 'lucide-svelte';
+	import NavItems from './NavItems.svelte';
 
 	export let closeOnly = false;
 	export let open = false;
@@ -11,17 +13,20 @@
 </script>
 
 <span class="sr-only">Toggle hamburger menu</span>
-<button
-	class="text-white hover:text-gray-700 cursor-pointer mr-4 border-none focus:outline-none"
-	class:closeOnly
-	on:click={() => (closeOnly = !closeOnly)}
->
-	<svg width="32" height="24">
-		<line id="top" x1="0" y1="2" x2="32" y2="2" />
-		<line id="middle" x1="0" y1="12" x2="24" y2="12" />
-		<line id="bottom" x1="0" y1="22" x2="32" y2="22" />
-	</svg>
-</button>
+
+<Sheet.Root>
+	<Sheet.Trigger>
+		<Menu />
+	</Sheet.Trigger>
+	<Sheet.Content>
+		<Sheet.Header>
+			<Sheet.Title>Are you sure absolutely sure?</Sheet.Title>
+			<Sheet.Description>
+				<NavItems />
+			</Sheet.Description>
+		</Sheet.Header>
+	</Sheet.Content>
+</Sheet.Root>
 
 <style>
 	svg {

@@ -12,13 +12,15 @@
 	};
 </script>
 
-<li>
-	<a
-		{href}
-		on:click={maybeCloseMenu}
-		class:active={isCurrentPage}
-		aria-current={isCurrentPage ? 'page' : false}
-	>
-		<slot />
-	</a>
-</li>
+<div>
+	<li class="text-2xl">
+		<a
+			{href}
+			on:click={maybeCloseMenu}
+			class:active={isCurrentPage}
+			aria-current={isCurrentPage ? 'page' : false}
+		>
+			<slot />
+		</a>
+	</li>
+</div>
