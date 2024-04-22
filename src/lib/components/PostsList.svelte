@@ -1,27 +1,27 @@
 <script>
-	export let posts = []
+	export let posts = [];
 </script>
 
-
-<ul class="posts-list">
+<ul class="lg:px-32">
 	{#each posts as post}
-		<li>
-			<article>
-				<a href="/blog/{post.slug}">
+		<a href="/blog/{post.slug}" class="rounded-lg shadow-lg py-4">
+			<article class="">
+				<div>
 					<img
-					src={post.coverImage}
-					alt=""
-					width={post.coverWidth}
-					height={post.coverHeight}
-					style="ratio: {post.coverWidth} / {post.coverHeight}"
+						src={post.coverImage}
+						alt=""
+						class="w-full h-64 object-cover"
+						width={post.coverWidth}
+						height={post.coverHeight}
+						style="ratio: {post.coverWidth} / {post.coverHeight}"
 					/>
 					<h2>
 						{post.title}
 					</h2>
-				</a>
+				</div>
 			</article>
 
 			<p>{post.excerpt}</p>
-		</li>
+		</a>
 	{/each}
 </ul>
