@@ -5,13 +5,18 @@
 	import NavItem from './NavItem.svelte';
 
 	onMount(() => {
-		gsap.from('.nav-item', {
-			duration: 0.4,
-			x: 100, // Horizontal slide from left
-			opacity: 0,
-			stagger: 0.2,
-			ease: 'power1.out'
-		});
+		// Define the maximum width for what you consider 'mobile'
+		const maxWidthForMobile = 768; // This is a common breakpoint for mobile devices
+
+		if (window.innerWidth <= maxWidthForMobile) {
+			gsap.from('.nav-item', {
+				duration: 0.4,
+				x: 100, // Horizontal slide from the right
+				opacity: 0,
+				stagger: 0.2,
+				ease: 'power1.out'
+			});
+		}
 	});
 </script>
 
