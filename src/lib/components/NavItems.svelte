@@ -10,10 +10,10 @@
 
 		if (window.innerWidth <= maxWidthForMobile) {
 			gsap.from('.nav-item', {
-				duration: 0.4,
+				duration: 0.3,
 				x: 100, // Horizontal slide from the right
 				opacity: 0,
-				stagger: 0.2,
+				stagger: 0.1,
 				ease: 'power1.out'
 			});
 		}
