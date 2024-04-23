@@ -1,6 +1,8 @@
 <script>
 	import GuyOne from '$lib/components/GuyOne.svelte';
 	import GirlOne from '$lib/components/GirlOne.svelte';
+	import PricingCard from '$lib/components/PricingCard.svelte';
+	import Faqs from '$lib/components/Faqs.svelte';
 	import { siteTitle, siteDescription } from '$lib/config';
 </script>
 
@@ -33,7 +35,7 @@
 
 	<img src="/images/tri1.svg" alt="" class="relative -top-[1px]" />
 </section>
-<section class="lg:grid lg:grid-cols-3 lg:p-10">
+<section class="lg:grid lg:grid-cols-3 lg:py-10">
 	<div class="place-self-center">
 		<h2 class="lg:text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
 		<p class="max-w-prose">
@@ -60,5 +62,47 @@
 			<li>test</li>
 			<li>test</li>
 		</ul>
+	</div>
+</section>
+
+<section class="grid p-5 lg:p-10 lg:grid-cols-3 gap-5 lg:gap-10">
+	<PricingCard>
+		<h2 slot="title">Hello</h2>
+		<ul slot="content">
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+		</ul>
+	</PricingCard>
+	<PricingCard>
+		<h2 slot="title">Hello</h2>
+		<ul slot="content">
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+		</ul>
+	</PricingCard>
+	<PricingCard>
+		<h2 slot="title">Hello</h2>
+		<ul slot="content">
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+			<li>hello</li>
+		</ul>
+	</PricingCard>
+</section>
+
+<section>
+	<div>
+		<h2 class="text-2xl text-center uppercase">Faq's</h2>
+	</div>
+	<div class="w-1/2 pb-5 mx-auto">
+		<Faqs />
 	</div>
 </section>
