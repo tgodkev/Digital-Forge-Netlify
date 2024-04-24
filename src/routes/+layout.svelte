@@ -1,4 +1,3 @@
-<!-- This is the global layout file; it "wraps" every page on the site. (Or more accurately: is the parent component to every page component on the site.) -->
 <script>
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -15,9 +14,6 @@
 	import '@fontsource/cormorant-garamond';
 	import '../app.postcss';
 	export let data;
-
-	const transitionIn = { delay: 150, duration: 150 };
-	const transitionOut = { duration: 100 };
 
 	/**
 	 * Updates the global store with the current path. (Used for highlighting
