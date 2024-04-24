@@ -3,21 +3,6 @@
 	import { gsap } from '$lib/gsapConfig';
 	import { navItems } from '$lib/config';
 	import NavItem from './NavItem.svelte';
-
-	onMount(() => {
-		// Define the maximum width for what you consider 'mobile'
-		const maxWidthForMobile = 768; // This is a common breakpoint for mobile devices
-
-		if (window.innerWidth <= maxWidthForMobile) {
-			gsap.from('.nav-item', {
-				duration: 0.3,
-				x: 100, // Horizontal slide from the right
-				opacity: 0,
-				stagger: 0.1,
-				ease: 'power1.out'
-			});
-		}
-	});
 </script>
 
 <ul

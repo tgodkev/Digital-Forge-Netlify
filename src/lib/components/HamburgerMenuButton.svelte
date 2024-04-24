@@ -2,61 +2,46 @@
 	import { isMenuOpen } from '../assets/js/store';
 	import * as Sheet from '$lib/components/ui/sheet';
 	import { Menu, X } from 'lucide-svelte';
-	import NavItems from './NavItems.svelte';
+	import { Button } from '$lib/components/ui/button';
+	import { gsap } from '$lib/gsapConfig';
+	import { onMount } from 'svelte';
+	import { navItems } from '$lib/config';
+	import NavItem from './NavItem.svelte';
 
-	export let closeOnly = false;
-	export let open = false;
+	onMount(() => {
+		// Define the maximum width for what you consider 'mobile'
+		const maxWidthForMobile = 768; // This is a common breakpoint for mobile devices
 
-	const toggleIsMenuOpen = () => {
-		isMenuOpen.set(!$isMenuOpen);
-	};
+		if (window.innerWidth <= maxWidthForMobile) {
+			gsap.from('.nav-item', {
+				duration: 0.3,
+				x: 100, // Horizontal slide from the right
+				opacity: 0,
+				stagger: 0.1,
+				ease: 'power1.out'
+			});
+		}
+	});
 </script>
 
 <span class="sr-only">Toggle hamburger menu</span>
 
 <Sheet.Root>
-	<Sheet.Trigger>
-		<Menu />
+	<Sheet.Trigger asChild let:builder>
+		<Button builders={[builder]} variant="outline"><Menu /></Button>
 	</Sheet.Trigger>
-	<Sheet.Content>
+	<Sheet.Content side="right">
 		<Sheet.Header>
-			<Sheet.Title>Are you sure absolutely sure?</Sheet.Title>
-			<Sheet.Description>
-				<NavItems />
-			</Sheet.Description>
+			<Sheet.Title>Netlify Starter</Sheet.Title>
 		</Sheet.Header>
+		<Sheet.Description class="flex flex-col pt-3">
+			{#each navItems as page}
+				<Sheet.Close asChild let:builder>
+					<Button class="nav-item" builders={[builder]} variant="ghost" href={page.route}
+						>{page.title}</Button
+					>
+				</Sheet.Close>
+			{/each}
+		</Sheet.Description>
 	</Sheet.Content>
 </Sheet.Root>
-
-<style>
-	svg {
-		min-height: 24px;
-		transition: transform 0.3s ease-in-out;
-	}
-
-	svg line {
-		stroke: currentColor;
-		stroke-width: 3;
-		transition: transform 0.3s ease-in-out;
-	}
-
-	button {
-		z-index: 20;
-	}
-
-	.closeOnly svg {
-		transform: scale(0.7);
-	}
-
-	.closeOnly #top {
-		transform: translate(6px, 0px) rotate(45deg);
-	}
-
-	.closeOnly #middle {
-		opacity: 0;
-	}
-
-	.closeOnly #bottom {
-		transform: translate(-12px, 9px) rotate(-45deg);
-	}
-</style>
