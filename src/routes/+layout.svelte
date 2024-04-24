@@ -8,6 +8,9 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import { siteTitle, siteURL } from '$lib/config.js';
+	import { gsap } from '$lib/gsapConfig';
+	import Logo from '$lib/components/Logo.svelte';
+
 	import '@fontsource/galindo';
 	import '@fontsource/cormorant-garamond';
 	import '../app.postcss';
@@ -33,6 +36,41 @@
 		const navRoutes = navItems.map((item) => item.route);
 		preloadCode(...navRoutes);
 	});
+
+	let overlay;
+
+	function customEnter(node) {
+		// Ensure the overlay starts off the screen to the left
+		gsap.set(overlay, { x: '-100%', display: 'block' });
+
+		// Animate overlay to cover the screen
+		gsap.to(overlay, {
+			x: '0%',
+			duration: 0.5,
+			ease: 'power1.inOut',
+			onComplete: () => {
+				// After covering, animate the overlay to slide out to the right
+				gsap.to(overlay, {
+					x: '100%',
+					duration: 0.5,
+					ease: 'power1.inOut',
+					onComplete: () => {
+						// Hide overlay after animation to prevent it from blocking interaction
+						gsap.set(overlay, { display: 'none' });
+					}
+				});
+			}
+		});
+	}
+
+	function customLeave(node) {
+		// Optionally fade out content quickly before new content comes in
+		gsap.to(node, {
+			opacity: 0,
+			duration: 0.3,
+			ease: 'power1.inOut'
+		});
+	}
 </script>
 
 <svelte:head>
@@ -61,9 +99,12 @@
 -->
 <div class:open={$isMenuOpen}>
 	<Header />
-	{#key data.path}
-		<main tabindex="-1" in:fade|global={transitionIn} out:fade|global={transitionOut}>
+	{#key $currentPage}
+		<main tabindex="-1" in:customEnter out:customLeave>
 			<slot />
+			<div bind:this={overlay} class="overlay fixed inset-0 bg-accent z-50 hidden">
+				<div class="h-44 w-44 flex"><Logo /></div>
+			</div>
 		</main>
 	{/key}
 	<Footer />
