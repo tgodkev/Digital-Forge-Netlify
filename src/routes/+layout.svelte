@@ -33,6 +33,7 @@
 	 * own preloadData() calls here, too.
 	 **/
 	onMount(() => {
+		customEnter();
 		const navRoutes = navItems.map((item) => item.route);
 		preloadCode(...navRoutes);
 	});
@@ -74,17 +75,6 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="/css/vars.css" />
-	<link rel="stylesheet" href="/css/root.css" />
-	<link rel="stylesheet" href="/css/typography.css" />
-	<link rel="stylesheet" href="/css/layout.css" />
-	<link rel="stylesheet" href="/css/components.css" />
-
-	<link rel="stylesheet" href="/css/forms.css" />
-	<link rel="stylesheet" href="/css/animation.css" />
-	<link rel="stylesheet" href="/css/utilities.css" />
-	<link rel="stylesheet" href="/css/code.css" />
-	<link rel="stylesheet" href="/css/prism.css" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
@@ -100,9 +90,14 @@
 <div class:open={$isMenuOpen}>
 	<Header />
 	{#key $currentPage}
-		<main tabindex="-1" in:customEnter out:customLeave>
+		<main tabindex="-1">
 			<slot />
-			<div bind:this={overlay} class="overlay fixed inset-0 bg-accent z-50 hidden">
+			<div
+				in:customEnter
+				out:customLeave
+				bind:this={overlay}
+				class="overlay fixed inset-0 bg-accent z-50 hidden"
+			>
 				<div class="h-44 w-44 flex"><Logo /></div>
 			</div>
 		</main>
