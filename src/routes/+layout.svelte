@@ -43,29 +43,20 @@
 		// Animate overlay to cover the screen
 		gsap.to(overlay, {
 			x: '0%',
-			duration: 0.4,
-			ease: 'power1.inOut',
+			duration: 0.3,
+			ease: 'power4.out',
 			onComplete: () => {
 				// After covering, animate the overlay to slide out to the right
 				gsap.to(overlay, {
 					x: '100%',
-					duration: 0.6,
-					ease: 'power1.inOut',
+					duration: 1.4,
+					ease: 'power4.out',
 					onComplete: () => {
 						// Hide overlay after animation to prevent it from blocking interaction
 						gsap.set(overlay, { display: 'none' });
 					}
 				});
 			}
-		});
-	}
-
-	function customLeave(node) {
-		// Optionally fade out content quickly before new content comes in
-		gsap.to(node, {
-			opacity: 0,
-			duration: 0.1,
-			ease: 'power1.inOut'
 		});
 	}
 </script>
@@ -90,7 +81,6 @@
 			<slot />
 			<div
 				in:customEnter
-				out:customLeave
 				bind:this={overlay}
 				class="fixed inset-0 z-50 hidden h-screen overlay bg-accent"
 			>
