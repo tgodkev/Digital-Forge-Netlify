@@ -1,6 +1,7 @@
 <script>
 	import GuyOne from '$lib/components/GuyOne.svelte';
 	import GirlOne from '$lib/components/GirlOne.svelte';
+	import GuyTwo from '$lib/components/GuyTwo.svelte';
 	import PricingCard from '$lib/components/PricingCard.svelte';
 	import Faqs from '$lib/components/Faqs.svelte';
 	import { siteTitle, siteDescription } from '$lib/config';
@@ -106,3 +107,18 @@
 		<Faqs />
 	</div>
 </section>
+
+<section class="lg:grid lg:grid-cols-3 lg:py-10 relative">
+	<div class="h-full w-full lg:col-span-2 rounded-md flex justify-center bg-primary">
+		<GuyTwo />
+	</div>
+	<div class="place-self-center">
+		<h2 class="lg:text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+		<p class="max-w-prose">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa ratione, illo, quod quia
+			dolorem, sapiente blanditiis cum accusamus soluta illum libero ad temporibus alias explicabo
+			veritatis repellat deleniti voluptatibus.
+		</p>
+	</div>
+</section>
+<img src="/images/tri1.svg" alt="" class="relative rotate-180" />
