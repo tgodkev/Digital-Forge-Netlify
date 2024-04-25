@@ -43,7 +43,7 @@
 		// Animate overlay to cover the screen
 		gsap.to(overlay, {
 			x: '0%',
-			duration: 0.5,
+			duration: 0.4,
 			ease: 'power1.inOut',
 			onComplete: () => {
 				// After covering, animate the overlay to slide out to the right
@@ -92,7 +92,7 @@
 				in:customEnter
 				out:customLeave
 				bind:this={overlay}
-				class="overlay h-screen fixed inset-0 bg-accent z-50 hidden"
+				class="fixed inset-0 z-50 hidden h-screen overlay bg-accent"
 			>
 				<div class="lg:w-[450px] lg:h-[450px] lg:mx-auto lg:mt-20">
 					<Logo />
