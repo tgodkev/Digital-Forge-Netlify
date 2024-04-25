@@ -94,7 +94,7 @@
 				bind:this={overlay}
 				class="overlay h-screen fixed inset-0 bg-accent z-50 hidden"
 			>
-				<div class="lg:w-96 lg:h-96 lg:mx-auto lg:mt-10">
+				<div class="lg:w-[450px] lg:h-[450px] lg:mx-auto lg:mt-20">
 					<Logo />
 				</div>
 			</div>
