@@ -49,7 +49,7 @@
 				// After covering, animate the overlay to slide out to the right
 				gsap.to(overlay, {
 					x: '100%',
-					duration: 0.5,
+					duration: 0.6,
 					ease: 'power1.inOut',
 					onComplete: () => {
 						// Hide overlay after animation to prevent it from blocking interaction
@@ -64,7 +64,7 @@
 		// Optionally fade out content quickly before new content comes in
 		gsap.to(node, {
 			opacity: 0,
-			duration: 0.3,
+			duration: 0.1,
 			ease: 'power1.inOut'
 		});
 	}
