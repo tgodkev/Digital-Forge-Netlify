@@ -92,9 +92,11 @@
 				in:customEnter
 				out:customLeave
 				bind:this={overlay}
-				class="overlay fixed inset-0 bg-accent z-50 hidden"
+				class="overlay h-screen fixed inset-0 bg-accent z-50 hidden"
 			>
-				<div class="h-44 w-44 flex"><Logo /></div>
+				<div class="lg:w-96 lg:h-96 lg:mx-auto lg:mt-10">
+					<Logo />
+				</div>
 			</div>
 		</main>
 	{/key}

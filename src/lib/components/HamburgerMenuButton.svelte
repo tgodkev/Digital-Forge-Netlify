@@ -28,11 +28,11 @@
 
 <Sheet.Root>
 	<Sheet.Trigger asChild let:builder>
-		<Button builders={[builder]} variant="outline"><Menu /></Button>
+		<Button builders={[builder]} variant="outline"><Menu class="text-black" /></Button>
 	</Sheet.Trigger>
 	<Sheet.Content side="right">
 		<Sheet.Header>
-			<Sheet.Title>Netlify Starter</Sheet.Title>
+			<Sheet.Title>Digital Forge</Sheet.Title>
 		</Sheet.Header>
 		<Sheet.Description class="flex flex-col pt-3">
 			{#each navItems as page}
