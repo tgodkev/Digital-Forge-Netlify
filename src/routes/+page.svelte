@@ -71,33 +71,39 @@
 
 <section class="grid gap-5 p-5 lg:p-10 lg:grid-cols-3 lg:gap-10">
 	<PricingCard>
-		<h2 slot="title">Hello</h2>
+		<h2 slot="title">Standard Site</h2>
 		<ul slot="content">
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
+			<li>Starting at $1500</li>
+			<li>4-page website</li>
+			<li>Built-in SEO</li>
+			<li>Mobile-friendly design</li>
+			<li>Custom design tailored to your needs</li>
+			<li>CMS included for easy updates</li>
+			<li>$20 per month maintenance, includes 1 hour of updates each month</li>
 		</ul>
 	</PricingCard>
 	<PricingCard>
-		<h2 slot="title">Hello</h2>
+		<h2 slot="title">Advanced Sites</h2>
 		<ul slot="content">
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
+			<li>Starting at $30000</li>
+			<li>5+ pages</li>
+			<li>Built-in SEO</li>
+			<li>Mobile-friendly design</li>
+			<li>Custom design tailored to your needs</li>
+			<li>CMS included for easy updates</li>
+			<li>$25 per month maintenance, includes 1 hour of updates each month</li>
 		</ul>
 	</PricingCard>
 	<PricingCard>
-		<h2 slot="title">Hello</h2>
+		<h2 slot="title">Ecommerce</h2>
 		<ul slot="content">
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
+			<li>Pricing Starting At 3000</li>
+			<li>Contact for a free quote!</li>
+			<li>Built-in SEO</li>
+			<li>Mobile-friendly design</li>
+			<li>Custom design tailored to your needs</li>
+			<li>CMS included for easy updates</li>
+			<li>$50 per month maintenance, includes 1 hour of updates each month</li>
 		</ul>
 	</PricingCard>
 </section>
@@ -116,11 +122,13 @@
 		<GuyTwo />
 	</div>
 	<div class="place-self-center">
-		<h2 class="lg:text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+		<h2 class="lg:text-2xl">Learn About Our Flexible Installment Plans</h2>
 		<p class="max-w-prose">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa ratione, illo, quod quia
-			dolorem, sapiente blanditiis cum accusamus soluta illum libero ad temporibus alias explicabo
-			veritatis repellat deleniti voluptatibus.
+			Don't let upfront costs hold you back. At Digital Forge, we offer flexible installment plans
+			that allow you to get started with just a percentage down. Spread the cost over time and get
+			your custom website up and running without the financial stress. <a href="#"
+				>Learn more about our payment options</a
+			>.
 		</p>
 	</div>
 </section>
