@@ -5,6 +5,7 @@ import { n as noop, b as isHTMLElement, h as isFunction, j as isElement, e as ex
 import { a as tick, t as toWritableStores, g as generateIds, o as overridable, c as createBitAttrs, r as removeUndefined, d as getOptionUpdater, e as createDispatcher, f as fade, I as Icon, h as fly } from "../../chunks/Icon.js";
 import { tv } from "tailwind-variants";
 import "clsx";
+import { B as Button } from "../../chunks/index3.js";
 import { n as navItems, d as siteAuthor, s as siteTitle, c as siteURL } from "../../chunks/config.js";
 import "../../chunks/client.js";
 const currentPage = writable("");
@@ -2160,6 +2161,7 @@ const Sheet_description = create_ssr_component(($$result, $$props, $$bindings, s
   )}`;
 });
 const Root = Dialog;
+const Close = Dialog_close;
 const Trigger = Dialog_trigger;
 const sheetVariants = tv({
   base: "fixed z-50 gap-4 bg-background p-6 shadow-lg",
@@ -2273,6 +2275,57 @@ const NavItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_currentPage();
   return `<div><li class="text-2xl"><a${add_attribute("href", href, 0)}${add_attribute("aria-current", isCurrentPage ? "page" : false, 0)}${add_classes((isCurrentPage ? "active" : "").trim())}>${slots.default ? slots.default({}) : ``}</a></li></div>`;
 });
+const HamburgerMenuButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<span class="sr-only" data-svelte-h="svelte-1yaclsl">Toggle hamburger menu</span> ${validate_component(Root, "Sheet.Root").$$render($$result, {}, {}, {
+    default: () => {
+      return `${validate_component(Trigger, "Sheet.Trigger").$$render($$result, { asChild: true }, {}, {
+        default: ({ builder }) => {
+          return `${validate_component(Button, "Button").$$render($$result, { builders: [builder], variant: "outline" }, {}, {
+            default: () => {
+              return `${validate_component(Menu$1, "Menu").$$render($$result, { class: "text-black" }, {}, {})}`;
+            }
+          })}`;
+        }
+      })} ${validate_component(Sheet_content, "Sheet.Content").$$render($$result, { side: "right" }, {}, {
+        default: () => {
+          return `${validate_component(Sheet_header, "Sheet.Header").$$render($$result, {}, {}, {
+            default: () => {
+              return `${validate_component(Sheet_title, "Sheet.Title").$$render($$result, {}, {}, {
+                default: () => {
+                  return `Digital Forge`;
+                }
+              })}`;
+            }
+          })} ${validate_component(Sheet_description, "Sheet.Description").$$render($$result, { class: "flex flex-col pt-3" }, {}, {
+            default: () => {
+              return `${each(navItems, (page) => {
+                return `${validate_component(Close, "Sheet.Close").$$render($$result, { asChild: true }, {}, {
+                  default: ({ builder }) => {
+                    return `${validate_component(Button, "Button").$$render(
+                      $$result,
+                      {
+                        class: "nav-item",
+                        builders: [builder],
+                        variant: "ghost",
+                        href: page.route
+                      },
+                      {},
+                      {
+                        default: () => {
+                          return `${escape(page.title)}`;
+                        }
+                      }
+                    )} `;
+                  }
+                })}`;
+              })}`;
+            }
+          })}`;
+        }
+      })}`;
+    }
+  })}`;
+});
 const NavItems = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<ul class="flex flex-col w-fit mx-auto items-start lg:flex-row lg:space-x-5 lg:items-center lg:justify-center">${each(navItems, (page) => {
     return `<div class="nav-item">${validate_component(NavItem, "NavItem").$$render($$result, { href: page.route }, {}, {
@@ -2281,42 +2334,6 @@ const NavItems = create_ssr_component(($$result, $$props, $$bindings, slots) => 
       }
     })} </div>`;
   })}</ul>`;
-});
-const HamburgerMenuButton = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let $$unsubscribe_isMenuOpen;
-  $$unsubscribe_isMenuOpen = subscribe(isMenuOpen, (value) => value);
-  let { closeOnly = false } = $$props;
-  let { open = false } = $$props;
-  if ($$props.closeOnly === void 0 && $$bindings.closeOnly && closeOnly !== void 0)
-    $$bindings.closeOnly(closeOnly);
-  if ($$props.open === void 0 && $$bindings.open && open !== void 0)
-    $$bindings.open(open);
-  $$unsubscribe_isMenuOpen();
-  return `<span class="sr-only" data-svelte-h="svelte-1yaclsl">Toggle hamburger menu</span> ${validate_component(Root, "Sheet.Root").$$render($$result, {}, {}, {
-    default: () => {
-      return `${validate_component(Trigger, "Sheet.Trigger").$$render($$result, {}, {}, {
-        default: () => {
-          return `${validate_component(Menu$1, "Menu").$$render($$result, {}, {}, {})}`;
-        }
-      })} ${validate_component(Sheet_content, "Sheet.Content").$$render($$result, {}, {}, {
-        default: () => {
-          return `${validate_component(Sheet_header, "Sheet.Header").$$render($$result, {}, {}, {
-            default: () => {
-              return `${validate_component(Sheet_title, "Sheet.Title").$$render($$result, {}, {}, {
-                default: () => {
-                  return `Are you sure absolutely sure?`;
-                }
-              })} ${validate_component(Sheet_description, "Sheet.Description").$$render($$result, {}, {}, {
-                default: () => {
-                  return `${validate_component(NavItems, "NavItems").$$render($$result, {}, {}, {})}`;
-                }
-              })}`;
-            }
-          })}`;
-        }
-      })}`;
-    }
-  })}`;
 });
 const MainNav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $isMenuOpen, $$unsubscribe_isMenuOpen;
@@ -2347,7 +2364,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   }
   $$unsubscribe_isMenuOpen();
   $$unsubscribe_currentPage();
-  return `  ${$$result.head += `<!-- HEAD_svelte-18816ru_START --><link rel="alternate" type="application/rss+xml"${add_attribute("title", siteTitle, 0)} href="${"http://" + escape(siteURL, true) + "/api/rss.xml"}"><!-- HEAD_svelte-18816ru_END -->`, ""}  <div${add_classes(($isMenuOpen ? "open" : "").trim())}>${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main tabindex="-1">${slots.default ? slots.default({}) : ``} <div class="overlay fixed inset-0 bg-accent z-50 hidden"${add_attribute("this", overlay, 0)}><div class="h-44 w-44 flex">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</div></div></main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
+  return `${$$result.head += `<!-- HEAD_svelte-18816ru_START --><link rel="alternate" type="application/rss+xml"${add_attribute("title", siteTitle, 0)} href="${"http://" + escape(siteURL, true) + "/api/rss.xml"}"><!-- HEAD_svelte-18816ru_END -->`, ""}  <div${add_classes(($isMenuOpen ? "open" : "").trim())}>${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main tabindex="-1">${slots.default ? slots.default({}) : ``} <div class="fixed inset-0 z-50 hidden h-screen overlay bg-accent"${add_attribute("this", overlay, 0)}><div class="lg:w-[450px] lg:h-[450px] lg:mx-auto lg:mt-20">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</div></div></main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}</div>`;
 });
 export {
   Layout as default

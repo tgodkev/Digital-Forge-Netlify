@@ -26,11 +26,9 @@
 		<div class="p-5 bg-white rounded-lg place-self-center w-fit">
 			<h1 class="text-2xl md:text-5xl">{siteTitle}</h1>
 			<p class="max-w-prose">
-				Welcome to Digital Forge, where we craft custom websites that drive success. Whether you
-				need a site to showcase your portfolio, promote your business, or reach your target audience
-				with precision, we've got you covered. Our tailored web solutions are designed to meet your
-				unique needs, ensuring top performance, fast load times, and excellent SEO. Let's build
-				something great together.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur exercitationem sint quia
+				incidunt nulla recusandae? Blanditiis nam omnis, hic accusantium voluptas in non eos odit
+				tempore odio autem ex expedita.
 			</p>
 		</div>
 		<div class="place-self-center">[Video will go here]</div>
@@ -40,12 +38,11 @@
 </section>
 <section class="lg:grid lg:grid-cols-3 lg:py-10">
 	<div class="place-self-center">
-		<h2 class="lg:text-2xl">User Transform Your Online Presence</h2>
+		<h2 class="lg:text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
 		<p class="max-w-prose">
-			Ready to elevate your brand and reach new heights? At Digital Forge, we specialize in creating
-			custom websites that not only look stunning but also perform exceptionally. Our expert team
-			will work with you to design a site that reflects your vision, engages your audience, and
-			drives results. Let's transform your online presence today.
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsa ratione, illo, quod quia
+			dolorem, sapiente blanditiis cum accusamus soluta illum libero ad temporibus alias explicabo
+			veritatis repellat deleniti voluptatibus.
 		</p>
 	</div>
 	<div class="flex justify-center w-full h-full rounded-md lg:col-span-2 bg-primary">
@@ -58,13 +55,13 @@
 		<GirlOne />
 	</div>
 	<div class="flex flex-col items-center w-full bg-white rounded-md place-self-center lg:p-10">
-		<h2>Benefits of a Custom Website</h2>
+		<h2>Lorem Ipsum</h2>
 		<ul class="flex gap-5">
-			<li>Effortlessly Publish Your Own Content</li>
-			<li>Low Monthly Fees</li>
-			<li>High Google Lighthouse Scores for Increased Conversions</li>
-			<li>Excellent SEO to Reach Your Target Audience</li>
-			<li>Fully Customized Solutions - No Prebuilt WordPress Templates!</li>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
+			<li>test</li>
 		</ul>
 	</div>
 </section>

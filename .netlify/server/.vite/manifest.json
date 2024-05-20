@@ -8,6 +8,16 @@
       "_internal.js"
     ]
   },
+  "_Faqs.js": {
+    "file": "chunks/Faqs.js",
+    "name": "Faqs",
+    "imports": [
+      "_ssr.js",
+      "_gsapConfig.js",
+      "_Icon.js",
+      "_index2.js"
+    ]
+  },
   "_Icon.js": {
     "file": "chunks/Icon.js",
     "name": "Icon",
@@ -70,6 +80,14 @@
     "name": "index",
     "imports": [
       "_ssr.js"
+    ]
+  },
+  "_index3.js": {
+    "file": "chunks/index3.js",
+    "name": "index",
+    "imports": [
+      "_ssr.js",
+      "_gsapConfig.js"
     ]
   },
   "_internal.js": {
@@ -216,11 +234,12 @@
       "_index2.js",
       "_gsapConfig.js",
       "_Icon.js",
+      "_index3.js",
       "_config.js",
       "_client.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CD-iTP0L.css"
+      "_app/immutable/assets/_layout.Dj4iCVjN.css"
     ],
     "assets": [
       "_app/immutable/assets/galindo-latin-ext-400-normal.c0O9VQrT.woff2",
@@ -252,9 +271,7 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_gsapConfig.js",
-      "_Icon.js",
-      "_index2.js",
+      "_Faqs.js",
       "_config.js"
     ]
   },
@@ -503,7 +520,25 @@
     "isEntry": true,
     "imports": [
       "_ssr.js",
-      "_gsapConfig.js"
+      "_gsapConfig.js",
+      "_index3.js"
+    ]
+  },
+  "src/routes/services/+page.js": {
+    "file": "entries/pages/services/_page.js",
+    "name": "entries/pages/services/_page",
+    "src": "src/routes/services/+page.js",
+    "isEntry": true
+  },
+  "src/routes/services/+page.svelte": {
+    "file": "entries/pages/services/_page.svelte.js",
+    "name": "entries/pages/services/_page.svelte",
+    "src": "src/routes/services/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_Faqs.js",
+      "_config.js"
     ]
   }
 }
