@@ -4,6 +4,7 @@
 	import GuyTwo from '$lib/components/GuyTwo.svelte';
 	import PricingCard from '$lib/components/PricingCard.svelte';
 	import Faqs from '$lib/components/Faqs.svelte';
+	import { Button } from '$lib/components/ui/button';
 	import { siteTitle, siteDescription } from '$lib/config';
 </script>
 
@@ -22,16 +23,17 @@
 </svelte:head>
 
 <section class="relative">
-	<div class="bg-primary lg:p-10 md:grid md:grid-cols-2">
+	<div class="bg-primary lg:p-10 lg:grid lg:grid-cols-2">
 		<div class="p-5 bg-white rounded-lg place-self-center w-fit">
-			<h1 class="text-2xl md:text-5xl">{siteTitle}</h1>
-			<p class="max-w-prose">
+			<h1 class="text-2xl lg:text-5xl">{siteTitle}</h1>
+			<p class="py-4 text-lg max-w-prose">
 				Welcome to Digital Forge, where we craft custom websites that drive success. Whether you
 				need a site to showcase your portfolio, promote your business, or reach your target audience
 				with precision, we've got you covered. Our tailored web solutions are designed to meet your
 				unique needs, ensuring top performance, fast load times, and excellent SEO. Let's build
 				something great together.
 			</p>
+			<Button variant="default" size="lg" href="/contact">Get Started</Button>
 		</div>
 		<div class="place-self-center">[Video will go here]</div>
 	</div>
@@ -39,9 +41,9 @@
 	<img src="/images/tri1.svg" alt="" class="relative -top-[1px]" />
 </section>
 <section class="lg:grid lg:grid-cols-3 lg:py-10">
-	<div class="place-self-center">
-		<h2 class="lg:text-2xl">User Transform Your Online Presence</h2>
-		<p class="max-w-prose">
+	<div class="place-self-center lg:p-5">
+		<h2 class="text-center lg:text-4xl">Transform Your Online Presence</h2>
+		<p class="py-4 text-lg max-w-prose">
 			Ready to elevate your brand and reach new heights? At Digital Forge, we specialize in creating
 			custom websites that not only look stunning but also perform exceptionally. Our expert team
 			will work with you to design a site that reflects your vision, engages your audience, and
@@ -59,12 +61,13 @@
 	</div>
 	<div class="flex flex-col items-center w-full bg-white rounded-md place-self-center lg:p-10">
 		<h2>Benefits of a Custom Website</h2>
-		<ul class="flex gap-5">
+		<ul class="gap-5 lg:grid lg:grid-cols-2">
 			<li>Effortlessly Publish Your Own Content</li>
 			<li>Low Monthly Fees</li>
 			<li>High Google Lighthouse Scores for Increased Conversions</li>
 			<li>Excellent SEO to Reach Your Target Audience</li>
 			<li>Fully Customized Solutions - No Prebuilt WordPress Templates!</li>
+			<li>Analytics On The Stuff you Need</li>
 		</ul>
 	</div>
 </section>
