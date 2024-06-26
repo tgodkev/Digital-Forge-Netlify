@@ -40,8 +40,8 @@
 
 	<img src="/images/tri1.svg" alt="" class="relative -top-[1px]" />
 </section>
-<section class="lg:grid lg:grid-cols-3 lg:py-10">
-	<div class="place-self-center lg:p-5">
+<section class="lg:grid lg:grid-cols-5 lg:py-10">
+	<div class="place-self-center lg:p-5 lg:col-span-3">
 		<h2 class="text-center lg:text-4xl">Transform Your Online Presence</h2>
 		<p class="py-4 text-lg max-w-prose">
 			Ready to elevate your brand and reach new heights? At Digital Forge, we specialize in creating
@@ -50,18 +50,18 @@
 			drives results. Let's transform your online presence today.
 		</p>
 	</div>
-	<div class="flex justify-center w-full h-full rounded-md lg:col-span-2 bg-primary">
+	<div class="flex justify-center w-full h-full rounded-md bg-primary lg:col-span-2">
 		<GuyOne />
 	</div>
 </section>
 
-<section class="lg:grid lg:grid-cols-2 bg-primary lg:p-5">
-	<div class="flex justify-center">
+<section class="lg:grid lg:grid-cols-5 bg-primary lg:p-5">
+	<div class="flex justify-center lg:col-span-2">
 		<GirlOne />
 	</div>
-	<div class="flex flex-col items-center w-full bg-white rounded-md place-self-center lg:p-10">
+	<div class="flex flex-col items-center w-full bg-white rounded-md lg:col-span-3">
 		<h2>Benefits of a Custom Website</h2>
-		<ul class="gap-5 lg:grid lg:grid-cols-2">
+		<ul class="gap-5 lg:grid lg:grid-cols-3">
 			<li>Effortlessly Publish Your Own Content</li>
 			<li>Low Monthly Fees</li>
 			<li>High Google Lighthouse Scores for Increased Conversions</li>
@@ -71,7 +71,6 @@
 		</ul>
 	</div>
 </section>
-
 <section class="grid gap-5 p-5 lg:p-10 lg:grid-cols-3 lg:gap-10">
 	<PricingCard>
 		<h2 slot="title">Standard Site</h2>
