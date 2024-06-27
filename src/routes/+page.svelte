@@ -42,7 +42,9 @@
 				<ContactForm location="homepage-hero-modal" />
 			</Modal>
 
-			<SilentForm location="homepage-hero-modal" />
+			<div class="hidden">
+				<SilentForm location="homepage-hero-modal" />
+			</div>
 		</div>
 		<div class="place-self-center">[Video will go here]</div>
 	</div>
