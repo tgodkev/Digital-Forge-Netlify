@@ -20,7 +20,7 @@
 
 <section class="p-5">
 	<form
-		name="{location}-page-form"
+		name="{location}-form"
 		class="max-w-2xl"
 		method="POST"
 		netlify-honeypot="bot-field"

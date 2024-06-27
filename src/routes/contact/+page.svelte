@@ -8,5 +8,5 @@
 
 <section class="p-5">
 	<h1>Contact</h1>
-	<ContactForm location="contact" />
+	<ContactForm location="contact-page" />
 </section>
