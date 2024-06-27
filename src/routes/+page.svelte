@@ -8,7 +8,8 @@
 	import { siteTitle, siteDescription } from '$lib/config';
 	import Modal from '$lib/components/Modal.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
-	import { Input } from '$lib/components/ui/input';
+
+	import SilentForm from '$lib/components/SilentForm.svelte';
 </script>
 
 <svelte:head>
@@ -40,22 +41,8 @@
 			<Modal>
 				<ContactForm location="homepage-hero-modal" />
 			</Modal>
-			<form
-				name="homepage-hero-modal-form"
-				class="hidden"
-				method="POST"
-				netlify-honeypot="bot-field"
-				data-netlify="true"
-			>
-				<input type="hidden" name="form-name" value="homepage-hero-modal-form" />
-				<label for="name">Name</label>
-				<Input name="name" id="name" required placeholder="Name" type="text" />
-				<label for="email">Email</label>
-				<Input name="email" id="email" required placeholder="Email" type="email" />
-				<label for="message">Message</label>
-				<Input name="message" id="message" required placeholder="Message" type="text" />
-				<Button type="submit" class="mt-2" size="lg" value="Submit">Submit</Button>
-			</form>
+
+			<SilentForm location="homepage-hero-modal" />
 		</div>
 		<div class="place-self-center">[Video will go here]</div>
 	</div>
