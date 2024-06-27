@@ -15,24 +15,18 @@
 
 <Button size="lg" on:click={toggleModal}>Get A Free Estimate</Button>
 
-{#if isOpen}
-	<div
-		class="fixed inset-0 z-50 flex items-center justify-center m-2 modal-background"
-		on:click={closeModal}
-		role="form"
-	>
-		<div class="relative p-10 bg-white rounded-lg shadow-lg modal-content">
-			<span
-				class="absolute top-0 right-0 p-10 text-2xl cursor-pointer"
-				on:click|stopPropagation={toggleModal}
-				role="">&times;</span
-			>
-			<h2 class="px-10 pt-10 text-base max-w-prose">Schedule A Free Consultation Now!</h2>
-
-			<slot />
-		</div>
+<div class="modal-background {isOpen ? 'visible' : 'hidden'}" on:click={closeModal} role="form">
+	<div class="relative p-10 bg-white rounded-lg shadow-lg modal-content" on:click|stopPropagation>
+		<span
+			class="absolute top-0 right-0 p-10 text-2xl cursor-pointer"
+			on:click={toggleModal}
+			role="button"
+			aria-label="Close modal">&times;</span
+		>
+		<h2 class="px-10 pt-10 text-base max-w-prose">Schedule A Free Consultation Now!</h2>
+		<slot />
 	</div>
-{/if}
+</div>
 
 <!-- Modal Component
 This is a Svelte component for creating modals or dialog boxes. It includes a button that toggles the visibility of the modal, the modal itself, and a slot for inserting custom content.
@@ -61,3 +55,22 @@ Structure
 toggleModal() function: This function is triggered when the user clicks the button to open or close the modal. It toggles the isOpen variable which controls the visibility of the modal.
 
 closeModal() function: This function is triggered when the user clicks outside the modal area. It checks whether the click event's target has the class modal-background and, if so, closes the modal. -->
+
+<style>
+	.modal-background {
+		position: fixed;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 50;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.visible {
+		display: flex;
+	}
+</style>
