@@ -6,6 +6,7 @@
 	import Faqs from '$lib/components/Faqs.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import { siteTitle, siteDescription } from '$lib/config';
+	import Modal from '$lib/components/Modal.svelte';
 </script>
 
 <svelte:head>
@@ -33,12 +34,13 @@
 				unique needs, ensuring top performance, fast load times, and excellent SEO. Let's build
 				something great together.
 			</p>
-			<Button variant="default" size="lg" href="/contact">Get Started</Button>
+
+			<Modal />
 		</div>
 		<div class="place-self-center">[Video will go here]</div>
 	</div>
 
-	<img src="/images/tri1.svg" alt="" class="relative -top-[1px]" />
+	<!-- <img src="/images/tri1.svg" alt="" class="relative -top-[1px]" /> -->
 </section>
 <section class="lg:grid lg:grid-cols-5 lg:py-10">
 	<div class="place-self-center lg:p-5 lg:col-span-3">
@@ -59,9 +61,9 @@
 	<div class="flex justify-center lg:col-span-2">
 		<GirlOne />
 	</div>
-	<div class="flex flex-col items-center w-full bg-white rounded-md lg:col-span-3">
-		<h2>Benefits of a Custom Website</h2>
-		<ul class="gap-5 lg:grid lg:grid-cols-3">
+	<div class="flex flex-col items-center w-full bg-white rounded-md lg:p-10 lg:col-span-3">
+		<h2 class="lg:text-4xl">Benefits of a Custom Website</h2>
+		<ul class="text-xl lg:grid lg:grid-cols-3">
 			<li>Effortlessly Publish Your Own Content</li>
 			<li>Low Monthly Fees</li>
 			<li>High Google Lighthouse Scores for Increased Conversions</li>
@@ -87,8 +89,8 @@
 	<PricingCard>
 		<h2 slot="title">Advanced Sites</h2>
 		<ul slot="content">
-			<li>Starting at $30000</li>
-			<li>5+ pages</li>
+			<li>Starting at $3000</li>
+			<li>5-10 pages</li>
 			<li>Built-in SEO</li>
 			<li>Mobile-friendly design</li>
 			<li>Custom design tailored to your needs</li>
@@ -99,7 +101,7 @@
 	<PricingCard>
 		<h2 slot="title">Ecommerce</h2>
 		<ul slot="content">
-			<li>Pricing Starting At 3000</li>
+			<li>Pricing Starting At $5000</li>
 			<li>Contact for a free quote!</li>
 			<li>Built-in SEO</li>
 			<li>Mobile-friendly design</li>
@@ -108,15 +110,6 @@
 			<li>$50 per month maintenance, includes 1 hour of updates each month</li>
 		</ul>
 	</PricingCard>
-</section>
-
-<section>
-	<div>
-		<h2 class="text-2xl text-center uppercase">Faq's</h2>
-	</div>
-	<div class="w-1/2 pb-5 mx-auto">
-		<Faqs />
-	</div>
 </section>
 
 <section class="relative lg:grid lg:grid-cols-3 lg:py-10">
@@ -134,4 +127,12 @@
 		</p>
 	</div>
 </section>
-<img src="/images/tri1.svg" alt="" class="relative rotate-180" />
+<section>
+	<div>
+		<h2 class="text-2xl text-center uppercase">Faq's</h2>
+	</div>
+	<div class="w-1/2 pb-5 mx-auto">
+		<Faqs />
+	</div>
+</section>
+<!-- <img src="/images/tri1.svg" alt="" class="relative rotate-180" /> -->
