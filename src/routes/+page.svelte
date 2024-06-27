@@ -7,6 +7,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { siteTitle, siteDescription } from '$lib/config';
 	import Modal from '$lib/components/Modal.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
 </script>
 
 <svelte:head>
@@ -35,7 +36,9 @@
 				something great together.
 			</p>
 
-			<Modal />
+			<Modal>
+				<ContactForm location="homepage-hero-modal" />
+			</Modal>
 		</div>
 		<div class="place-self-center">[Video will go here]</div>
 	</div>
