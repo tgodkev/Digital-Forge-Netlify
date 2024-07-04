@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { Input } from '$lib/components/ui/input';
 	import { Button } from '$lib/components/ui/button/index.js';
-
 	import { gsap } from '$lib/gsapConfig';
 
 	onMount(() => {
@@ -20,13 +19,13 @@
 
 <section class="p-5">
 	<form
-		name="{location}-form"
+		name={`${location}-form`}
 		class="max-w-2xl"
 		method="POST"
 		netlify-honeypot="bot-field"
 		data-netlify="true"
 	>
-		<input type="hidden" name="form-name" value="{location}-page-form" />
+		<input type="hidden" name="form-name" value={`${location}-form`} />
 		<label for="name">Name</label>
 		<Input name="name" id="name" required placeholder="Name" type="text" />
 		<label for="email">Email</label>
