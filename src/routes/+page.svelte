@@ -121,18 +121,24 @@
 </section>
 
 <section class="relative lg:grid lg:grid-cols-3 lg:py-10">
-	<div class="flex justify-center w-full h-full rounded-md lg:col-span-2 bg-primary">
+	<div class="flex justify-center w-full h-full rounded-md lg:col-span-1 bg-primary">
 		<GuyTwo />
 	</div>
-	<div class="place-self-center">
+	<div class="place-self-center p-5">
 		<h2 class="lg:text-2xl">Learn About Our Flexible Installment Plans</h2>
 		<p class="max-w-prose">
 			Don't let upfront costs hold you back. At Digital Forge, we offer flexible installment plans
 			that allow you to get started with just a percentage down. Spread the cost over time and get
 			your custom website up and running without the financial stress. <a href="#"
 				>Learn more about our payment options</a
-			>.
+			>
 		</p>
+		<Modal>
+			<ContactForm location="homepage-installment-modal" />
+			<div class="hidden">
+				<SilentForm location="homepage-installment-modal" />
+			</div>
+		</Modal>
 	</div>
 </section>
 <section>

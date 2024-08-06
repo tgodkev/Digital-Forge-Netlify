@@ -5,11 +5,11 @@
 	import { gsap } from '$lib/gsapConfig';
 
 	onMount(() => {
-		gsap.from('input, label, button', {
+		gsap.from('.anim-label, .anim-input, .anim-button', {
 			duration: 1,
 			x: -500, // Horizontal slide from left
 			opacity: 0,
-			stagger: 0.3, // Time delay between starting animations for each input
+			stagger: 0.3, // Time delay between starting animations for each element
 			ease: 'power1.out'
 		});
 	});
@@ -26,12 +26,19 @@
 		data-netlify="true"
 	>
 		<input type="hidden" name="form-name" value={`${location}-form`} />
-		<label for="name">Name</label>
-		<Input name="name" id="name" required placeholder="Name" type="text" />
-		<label for="email">Email</label>
-		<Input name="email" id="email" required placeholder="Email" type="email" />
-		<label for="message">Message</label>
-		<Input name="message" id="message" required placeholder="Message" type="text" />
-		<Button type="submit" class="mt-2" size="lg" value="Submit">Submit</Button>
+		<label for="name" class="anim-label">Name</label>
+		<Input class="anim-input" name="name" id="name" required placeholder="Name" type="text" />
+		<label for="email" class="anim-label">Email</label>
+		<Input class="anim-input" name="email" id="email" required placeholder="Email" type="email" />
+		<label for="message" class="anim-label">Message</label>
+		<Input
+			class="anim-input"
+			name="message"
+			id="message"
+			required
+			placeholder="Message"
+			type="text"
+		/>
+		<Button class="anim-button mt-2" type="submit" size="lg" value="Submit">Submit</Button>
 	</form>
 </section>
